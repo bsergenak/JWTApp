@@ -26,7 +26,7 @@ namespace JWTAppBackOffice.Core.Features.CQRS.Handlers
             else
             {
                 dto.IsExists = true;
-                dto.UserName = request.Username;
+                dto.Username = request.Username;
                 dto.Id = user.Id;
                 AppRole role = await _appRoleRepository.GetByFilterAsync(x => x.Id == user.AppRoleId);
                 dto.Role = role.Definition;
